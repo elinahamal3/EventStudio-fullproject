@@ -74,16 +74,16 @@ echo json_encode([
     try {
         // Server settings
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com'; // Your SMTP server
+        $mail->Host       = 'smtp.gmail.com'; // using SMTP server
         $mail->SMTPAuth   = true;
         $mail->Username   = 'youremail@gmail.com'; // Your email
-        $mail->Password   = 'yourapppassword';   // Use App Password if Gmail
+        $mail->Password   = 'yourapppassword';   // Use App Password 
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
         // Recipients
         $mail->setFrom('youremail@gmail.com', 'Event Studio');
-        $mail->addAddress($email, $name); // Booking user email
+        $mail->addAddress($email, $name); // user details will occur 
 
         // Content
         $mail->isHTML(true);
